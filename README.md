@@ -1,133 +1,82 @@
-# 🏗 System Architecture
+# 🔍 RootCause AI
 
-## High-Level Architecture
+<div align="center">
 
-```text
-┌─────────────────────────┐
-│      User Interface     │
-│      (Next.js UI)       │
-└────────────┬────────────┘
-             │
-             ▼
-┌─────────────────────────┐
-│ Investigation Engine    │
-│ Hypothesis Submission   │
-│ Evidence Analysis       │
-└────────────┬────────────┘
-             │
-             ▼
-┌─────────────────────────┐
-│ Evaluation Layer        │
-│                         │
-│ Gemini AI Evaluation    │
-│ +                       │
-│ Custom Scoring Engine   │
-└────────────┬────────────┘
-             │
-             ▼
-┌─────────────────────────┐
-│ Root Cause Engine       │
-│                         │
-│ Confidence Score        │
-│ Root Cause Detection    │
-│ Reasoning Assessment    │
-│ Timeline Generation     │
-└────────────┬────────────┘
-             │
-             ▼
-┌─────────────────────────┐
-│ Visualization Layer     │
-│                         │
-│ Root Cause Chain        │
-│ Investigation Timeline  │
-│ AI Feedback Dashboard   │
-│ Investigation Reports   │
-└─────────────────────────┘
-```
+### AI-Powered STEM Investigation & Root Cause Analysis Platform
+
+Transforming STEM education through evidence-based reasoning, engineering investigation, and AI-assisted failure analysis.
+
+🌐 **Live Demo:** https://rootcause-ai-dsh.vercel.app/
+
+🚀 **Hackathon Project | Next.js + Gemini AI + TypeScript**
+
+</div>
 
 ---
 
-## Frontend Layer
+# 📖 Overview
 
-The frontend is built using **Next.js 16**, **React 19**, and **TypeScript**.
+RootCause AI is an interactive STEM investigation platform designed to teach students how engineers, scientists, and investigators analyze failures.
 
-Responsibilities:
+Instead of memorizing concepts, users examine evidence, construct hypotheses, identify root causes, and receive AI-powered feedback on their reasoning process.
 
-* Investigation case selection
-* Evidence presentation
-* Hypothesis submission
-* Score visualization
-* Timeline rendering
-* Root cause visualization
-* Investigation reporting
-
-Technologies:
-
-* Next.js
-* React
-* TypeScript
-* Tailwind CSS
-* Lucide Icons
+The platform simulates real-world engineering investigations and helps learners develop critical thinking, systems thinking, and evidence-based decision-making skills.
 
 ---
 
-## Investigation Engine
+# 🎯 Problem Statement
 
-The Investigation Engine acts as the educational simulation layer.
+Traditional STEM education often emphasizes solving predefined problems rather than understanding why systems fail.
 
-Responsibilities:
+Students rarely practice:
 
-* Load investigation cases
-* Present evidence
-* Manage user reasoning workflow
-* Trigger evaluation process
+* Root Cause Analysis
+* Failure Investigation
+* Evidence-Based Reasoning
+* Engineering Decision Making
+* Hypothesis Construction
+* Systems Thinking
 
-Current domains:
-
-* Electronics
-* Physics
-* Chemistry
-* Robotics
+As a result, many learners struggle to apply theoretical knowledge to real-world engineering challenges.
 
 ---
 
-## AI Evaluation Layer
+# 💡 Our Solution
 
-RootCause AI uses a hybrid evaluation model.
+RootCause AI transforms STEM learning into an interactive investigation experience.
 
-### Primary Evaluation
+Users:
 
-Google Gemini API evaluates:
+1. Review evidence from a failure scenario
+2. Analyze technical observations
+3. Construct an investigation hypothesis
+4. Submit reasoning for evaluation
+5. Receive AI-generated feedback
+6. Visualize the failure chain
+7. Explore investigation timelines
+8. Understand the root cause
 
-* Logical reasoning quality
-* Engineering thinking
-* Evidence usage
-* Hypothesis structure
+This creates a hands-on environment where learners practice thinking like engineers and investigators.
 
-### Fallback Evaluation
+---
 
-Custom scoring engine evaluates:
+# ✨ Core Features
 
-* Evidence keywords
+## 🧠 AI Investigation Evaluator
+
+Evaluates:
+
+* Logical reasoning
+* Evidence utilization
 * Cause-effect relationships
-* Reasoning depth
-* Investigation completeness
-
-This ensures the platform remains functional even when external AI services are unavailable.
+* Engineering thinking
+* Root cause identification
 
 ---
 
-## Root Cause Analysis Engine
+## 🔗 Root Cause Chain Visualization
 
-The Root Cause Engine transforms raw reasoning into structured analysis.
-
-Capabilities:
-
-* Root cause identification
-* Confidence estimation
-* Failure chain reconstruction
-* Investigation scoring
-* Strength/weakness detection
+Visual representation of failure progression.
 
 Example:
 
@@ -141,93 +90,244 @@ Drone Crash
 
 ---
 
-## Visualization Layer
+## 📅 Investigation Timeline
 
-The visualization system converts investigation results into interactive educational insights.
-
-Components:
-
-### Root Cause Chain
-
-Displays relationships between failure events.
-
-### Investigation Timeline
-
-Shows chronological reconstruction of events.
-
-### AI Feedback Panel
-
-Provides:
-
-* Strengths
-* Weaknesses
-* Confidence score
-* Reasoning assessment
-
-### Investigation Report
-
-Summarizes findings and recommendations.
+Chronological reconstruction of events leading to system failure.
 
 ---
 
-## Data Flow
+## 📊 Reasoning Assessment
+
+Generates:
+
+* Investigation Score
+* Confidence Level
+* Strength Analysis
+* Weakness Analysis
+* Root Cause Prediction
+
+---
+
+## 🧪 Multi-Domain STEM Cases
+
+Current domains:
+
+* Electronics
+* Physics
+* Chemistry
+* Robotics
+
+---
+
+# 🏗 System Architecture
+
+```text
+┌────────────────────────────────────────────┐
+│                Frontend UI                 │
+│     Next.js + React + Tailwind CSS         │
+└───────────────────┬────────────────────────┘
+                    │
+                    ▼
+┌────────────────────────────────────────────┐
+│         Investigation Management           │
+│       Evidence + Hypothesis Engine         │
+└───────────────────┬────────────────────────┘
+                    │
+                    ▼
+┌────────────────────────────────────────────┐
+│          AI Evaluation Layer               │
+│                                            │
+│  Google Gemini API                         │
+│  +                                         │
+│  Custom Scoring Engine                     │
+└───────────────────┬────────────────────────┘
+                    │
+                    ▼
+┌────────────────────────────────────────────┐
+│         Root Cause Analysis Engine         │
+│                                            │
+│  • Reasoning Evaluation                    │
+│  • Confidence Scoring                      │
+│  • Failure Classification                  │
+│  • Timeline Reconstruction                 │
+└───────────────────┬────────────────────────┘
+                    │
+                    ▼
+┌────────────────────────────────────────────┐
+│          Visualization Layer               │
+│                                            │
+│  • Root Cause Chain                        │
+│  • Investigation Timeline                  │
+│  • AI Feedback Dashboard                   │
+│  • Reports & Analytics                     │
+└────────────────────────────────────────────┘
+```
+
+---
+
+# ⚙️ Technology Stack
+
+## Frontend
+
+* Next.js 16
+* React 19
+* TypeScript
+* Tailwind CSS
+* Lucide React
+
+## AI Layer
+
+* Google Gemini API
+* Prompt Engineering
+* Custom Evaluation Engine
+
+## Backend
+
+* Next.js API Routes
+* Server-side Evaluation Logic
+
+## Development Tools
+
+* Git
+* GitHub
+* Vercel
+
+---
+
+# 🔄 Investigation Workflow
 
 ```text
 User
   │
   ▼
-Evidence Review
+Select Investigation Case
   │
   ▼
-Hypothesis Creation
+Review Evidence
+  │
+  ▼
+Create Hypothesis
+  │
+  ▼
+Submit Investigation
   │
   ▼
 AI Evaluation
   │
   ▼
-Scoring Engine
-  │
-  ▼
-Root Cause Detection
+Root Cause Analysis
   │
   ▼
 Timeline Generation
   │
   ▼
-Visualization Dashboard
+Feedback & Insights
 ```
 
 ---
 
-## Scalability Roadmap
+# 📸 Example Investigation
 
-Future architecture extensions:
+## Drone Failure Investigation
 
-* Multi-user investigations
-* Team collaboration
-* Real-time AI tutoring
-* Case recommendation system
-* User progress tracking
-* Database-backed analytics
-* PDF report generation
-* Instructor dashboard
+### Evidence
+
+* Battery temperature reached 92°C
+* Voltage fluctuations detected
+* Motor 3 stopped responding
+* Drone lost altitude
+
+### AI Result
+
+**Root Cause**
+
+Thermal + Electrical Cascade Failure
+
+**Confidence**
+
+95%
+
+**Investigation Score**
+
+100/100
 
 ---
 
-## Security Considerations
+# 🎓 Educational Impact
 
-* Environment variables protected using `.env.local`
-* API keys excluded from version control
-* Server-side evaluation endpoints
-* Client-side data validation
-* Controlled AI response parsing
+RootCause AI helps learners:
+
+✅ Develop critical thinking
+
+✅ Learn structured problem solving
+
+✅ Practice engineering reasoning
+
+✅ Analyze technical evidence
+
+✅ Build investigative skills
+
+✅ Understand system failures
 
 ---
 
-## Design Philosophy
+# 🚀 Future Roadmap
 
-RootCause AI is designed around a single principle:
+* User Accounts
+* Leaderboards
+* Case Authoring System
+* Team Investigations
+* PDF Report Export
+* Instructor Dashboard
+* Progress Tracking
+* Advanced AI Feedback
 
-> “Students should learn how engineers think, not just what engineers know.”
+---
 
-The platform promotes evidence-driven reasoning, critical thinking, and structured problem-solving through realistic investigation scenarios.
+# 🛠 Local Setup
+
+```bash
+git clone https://github.com/Garv0714/rootcause-ai-dsh.git
+
+cd rootcause-ai-dsh
+
+npm install
+
+npm run dev
+```
+
+---
+
+# 🔑 Environment Variables
+
+Create a `.env.local` file:
+
+```env
+GEMINI_API_KEY=YOUR_GEMINI_API_KEY
+```
+
+---
+
+# 🌐 Live Demo
+
+https://rootcause-ai-dsh.vercel.app/
+
+---
+
+# 👨‍💻 Author
+
+**Garv Sharma**
+
+B.Tech – Electronics & Advanced Communication Technology
+
+Maharaja Agrasen Institute of Technology (MAIT)
+
+---
+
+<div align="center">
+
+### Built for DSH Hacks 2026 🚀
+
+Empowering students to think like engineers, not just memorize like students.
+
+</div>
